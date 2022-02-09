@@ -49,7 +49,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Known bugs
 
-* current bugs exist in linking between parent and child component
+* no known bugs exist
 
 ## Further help
 
