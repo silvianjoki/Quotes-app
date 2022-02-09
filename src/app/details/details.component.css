@@ -3,8 +3,9 @@ h1{
     color: white;
     text-align: center;
     font-weight: bolder;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    /* padding-top: 2%; */
+    padding-bottom: 1%;
+    font-size: 60px;
     /* font-size: xx-large; */
 }
 h4{
@@ -32,6 +33,7 @@ span{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    /* align-items: right; */
 }
 
 #quotes-button{
@@ -42,4 +44,10 @@ span{
     background-color: aliceblue;
     box-shadow: 2px 2px 2px 2px;
 }
-
+#datecolor {
+    color: coral;
+}
+.card-text{
+    font-family: 'The Dongle',sans-serif;
+    font-size: 18px;
+}

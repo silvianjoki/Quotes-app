@@ -11,13 +11,15 @@
                 <div class="cards">
                     <div *ngFor="let quote  of sortQuotes; let i= index" class="card" style="width: 20rem;">
                     <div class="card-body">
-                        <h4 class="card-title"> {{quote.likes}} <button (click)="displayInfo(i)" class="btn btn-dark btn-sm" id="quotes-button">Read more</button></h4>
+                        <h4 class="card-title"> {{quote.likes}} 
+                            <!-- <button (click)="displayInfo(i)" class="btn btn-dark btn-sm" id="quotes-button">Read more</button> -->
+                        </h4>
                         <p class="card-text"> {{quote.quote}}</p>
                         <app-details *ngIf="quote.showInfo" (isRead)="quoteDelete ($event, i)"></app-details>
                         <span class="card-subtitle mb-2">Shared by: 
-                            <span id="name">{{quote.name}}>
+                            <span id="name">{{quote.name}} 
                             <span id="date">
-                            on:<span id="datecolor">{{quote.datePosted|date:'short'}}</span></span></span></span>
+                            on: <span id="datecolor">{{quote.datePosted|date:'short'}}</span></span></span></span>
                     </div>
                     </div>
                 </div>
