@@ -2,16 +2,18 @@
     <h1>
         {{title | titlecase}}
     </h1>
+    <hr style="width:50%;">
     <div class="container-fluid">
         <div class="row">
             <div class = col-sm-3>
                 <app-form (addQuote)="addedQuote($event)"></app-form>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-9">
+                <h3 class="text-center">Feel inspired</h3>
                 <div class="cards">
                     <div *ngFor="let quote  of sortQuotes; let i= index" class="card" style="width: 20rem;">
-                    <div class="card-body">
-                        <h4 class="card-title" appHighlightQuote> {{quote.likes}} 
+                    <div class="card-body" appHighlightQuote *ngIf="highlightHighest() === quote.likes && quote.likes> 0">
+                        <h4 class="card-title" > {{quote.likes}} 
                             <button (click)="displayInfo(i)" class="btn btn-dark btn-sm" id="quotes-button">Read more</button>
                         </h4>
                         <p class="card-text"> {{quote.quote}}</p>

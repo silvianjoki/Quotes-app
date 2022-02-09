@@ -28,8 +28,6 @@ export class DetailsComponent implements OnInit {
     });
   }
   // add new quote
-
-
     addedQuote(quote:any){
       let arraysize = this.quotes.length;
       quote.completeDate = new Date(quote.completeDate)
@@ -45,8 +43,22 @@ export class DetailsComponent implements OnInit {
       }
     }
   }
+  
     displayInfo(index:any){
       this.quotes[index].showInfo = !this.quotes [index].showInfo;
     }
   }
+  highlightHighest() {
+    let quotelikes = []
+    let highestlikes: number
+    for(let j = 0; j < this.quotes.length; j++){
+      quotelikes.push(this.quotes[j].likes)
+    }
+    quotelikes.sort(function (a,b) {
+      return b-a
+    })
+    highestlikes = quotelikes[0]
+    return highestlikes;
+  }
+  
 
