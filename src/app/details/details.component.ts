@@ -13,11 +13,11 @@ export class DetailsComponent implements OnInit {
 
   title = 'Review Amazing Quotes';
   quotes:Quotes[] = [
-    new Quotes ( 'Hillary',  'Technology is best when it brings people together.', 'Matt Mullenweg'),
-    new Quotes ( 'Aimee', 'It has become appallingly obvious that our technology has exceeded our humanity.', 'Albert Einstein'),
-    new Quotes ( 'Sam', 'The purpose of our lives is to be happy.', 'Dalai Lama'),
-    new Quotes ( 'Grace', 'Get busy living or get busy dying.', 'Stephen King'),
-    new Quotes ( 'Eve', 'Always focus on the work, rather than its reward.', 'Bravagad Gita')
+    new Quotes ( 'Hillary','Technology',  'Technology is best when it brings people together.', 'Matt Mullenweg'),
+    new Quotes ( 'Aimee','Tech', 'It has become appallingly obvious that our technology has exceeded our humanity.', 'Albert Einstein'),
+    new Quotes ( 'Sam', 'Life', 'The purpose of our lives is to be happy.', 'Dalai Lama'),
+    new Quotes ( 'Grace','Purpose', 'Get busy living or get busy dying.', 'Stephen King'),
+    new Quotes ( 'Eve', 'Life', 'Always focus on the work, rather than its reward.', 'Bravagad Gita')
   ];
   
   

@@ -11,8 +11,8 @@
                 <div class="cards">
                     <div *ngFor="let quote  of sortQuotes; let i= index" class="card" style="width: 20rem;">
                     <div class="card-body">
-                        <h4 class="card-title"> {{quote.likes}} 
-                            <!-- <button (click)="displayInfo(i)" class="btn btn-dark btn-sm" id="quotes-button">Read more</button> -->
+                        <h4 class="card-title" appHighlightQuote> {{quote.likes}} 
+                            <button (click)="displayInfo(i)" class="btn btn-dark btn-sm" id="quotes-button">Read more</button>
                         </h4>
                         <p class="card-text"> {{quote.quote}}</p>
                         <app-upvote *ngIf="quote.showInfo" (isRead)="quoteDelete ($event, i)"></app-upvote>

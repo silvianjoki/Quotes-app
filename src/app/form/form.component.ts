@@ -10,7 +10,7 @@ import { Quotes} from '../quotes'
 })
 export class FormComponent implements OnInit {
 
-  quoted= new Quotes ('Silvia','Take some rest', 'Silvie');
+  quoted= new Quotes ('Silvia','Rest','Take some rest', 'Silvie');
   @Output() add = new EventEmitter < Quotes > ();
   name !:string;
   title !:string;

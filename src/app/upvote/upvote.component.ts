@@ -9,7 +9,7 @@ import { Quotes } from '../quotes';
 })
 export class UpvoteComponent implements OnInit {
 
-  quots = new Quotes('','','');
+  quots = new Quotes('','','','');
   @Output() deleteQuote = new EventEmitter <Quotes> ()
   quoteDelete (){
     this.deleteQuote.emit(this.quots)
