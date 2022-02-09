@@ -29,7 +29,8 @@ span{
     margin-left: 4%;
     padding-bottom: 5%;
     padding-top: 5%;
-    /* height: 700px; */
+    height: 100%;
+    width: 100%;
 }
 #name{
     color: rgba(4, 52, 83, 0.637);
@@ -38,6 +39,7 @@ span{
 .all-cards{
     /* display: flex; */
     flex-direction: column;
+    column-count: 2;
     flex-wrap: wrap;
     justify-content: space-around;
     height: 600px;

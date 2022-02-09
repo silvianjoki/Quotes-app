@@ -20,7 +20,7 @@ export class UpvoteComponent implements OnInit {
     this.quots.likes+=1;
   }
   downvote(){
-    this.quots.likes+=1;
+    this.quots.dislikes+=1;
 
   }
 
