@@ -15,6 +15,7 @@ export class UpvoteComponent implements OnInit {
     this.deleteQuote.emit(this.quots)
   }
   
+  
   upvote(){
     this.quots.likes+=1;
   }

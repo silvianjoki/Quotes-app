@@ -43,22 +43,26 @@ export class DetailsComponent implements OnInit {
       }
     }
   }
-  
+
     displayInfo(index:any){
       this.quotes[index].showInfo = !this.quotes [index].showInfo;
     }
   }
-  highlightHighest() {
-    let quotelikes = []
-    let highestlikes: number
-    for(let j = 0; j < this.quotes.length; j++){
-      quotelikes.push(this.quotes[j].likes)
-    }
-    quotelikes.sort(function (a,b) {
-      return b-a
-    })
-    highestlikes = quotelikes[0]
-    return highestlikes;
-  }
+  // highlightHighest() {
+  //   let quotelikes = []
+  //   let highestlikes: number
+  //   for(let j = 0; j < this.quotes.length; j++){
+  //     quotelikes.push(this.quotes[j].likes)
+  //   }
+  // quotelikes.sort(function (a,b) {
+  //     return b-a
+  //   })
+  //   highestlikes = quotelikes[0]
+  //   return highestlikes;
+  // }
   
+
+function highlightHighest() {
+  throw new Error('Function not implemented.');
+}
 

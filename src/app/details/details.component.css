@@ -1,3 +1,8 @@
+.row {
+    padding:2%;
+    align-items: right;
+    /* margin-left: 50%; */
+}
 h1{
     font-family: 'The Nautigal', cursive;
     color: white;
@@ -24,6 +29,7 @@ span{
     margin-left: 4%;
     padding-bottom: 5%;
     padding-top: 5%;
+    /* height: 700px; */
 }
 #name{
     color: rgba(4, 52, 83, 0.637);
@@ -31,9 +37,17 @@ span{
 }
 .all-cards{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
-    /* align-items: right; */
+    height: 600px;
+    align-items: right;
+    transform: y(-3px);
+    /* align-items: flex-start; */
+    margin-left: 60%;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    align-items: right;
 }
 
 #quotes-button{
@@ -50,4 +64,9 @@ span{
 .card-text{
     font-family: 'The Dongle',sans-serif;
     font-size: 18px;
+}
+.col-sm-9 {
+    align-items: right;
+    margin-left: 60%;
+    padding-top: 0%;
 }
