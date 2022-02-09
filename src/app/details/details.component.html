@@ -7,7 +7,7 @@
             <div class = col-sm-3>
                 <app-form (addQuote)="addedQuote($event)"></app-form>
             </div>
-            <div class="col-sm-9">
+            <div class="col-sm-4">
                 <div class="cards">
                     <div *ngFor="let quote  of sortQuotes; let i= index" class="card" style="width: 20rem;">
                     <div class="card-body">
@@ -15,7 +15,7 @@
                             <!-- <button (click)="displayInfo(i)" class="btn btn-dark btn-sm" id="quotes-button">Read more</button> -->
                         </h4>
                         <p class="card-text"> {{quote.quote}}</p>
-                        <app-details *ngIf="quote.showInfo" (isRead)="quoteDelete ($event, i)"></app-details>
+                        <app-upvote *ngIf="quote.showInfo" (isRead)="quoteDelete ($event, i)"></app-upvote>
                         <span class="card-subtitle mb-2">Shared by: 
                             <span id="name">{{quote.name}} 
                             <span id="date">

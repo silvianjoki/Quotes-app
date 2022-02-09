@@ -17,6 +17,7 @@ export class DetailsComponent implements OnInit {
     new Quotes ( 'Aimee', 'It has become appallingly obvious that our technology has exceeded our humanity.', 'Albert Einstein'),
     new Quotes ( 'Sam', 'The purpose of our lives is to be happy.', 'Dalai Lama'),
     new Quotes ( 'Grace', 'Get busy living or get busy dying.', 'Stephen King'),
+    new Quotes ( 'Eve', 'Always focus on the work, rather than its reward.', 'Bravagad Gita')
   ];
   
   
