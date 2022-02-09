@@ -1,0 +1,14 @@
+#delete{
+    font-size: 20px;
+    margin-right: 2%;
+}
+#like{
+    font-size: 16px;
+
+}
+
+.card-footer{
+    padding: 1%;
+    margin-bottom: 0 !important;
+    background-color: white;
+}
