@@ -3,11 +3,11 @@
         {{title | titlecase}}
     </h1>
     <hr style="width:50%;">
+    <div class = col-sm-3>      
+        <app-form (addQuote)="addedQuote($event)"></app-form>
+    </div>
     <div class="container-fluid">
         <div class="row">
-            <div class = col-sm-3>      
-                <app-form (addQuote)="addedQuote($event)"></app-form>
-            </div>
             <div class="col-sm-9">
                 <!-- <h3 class="text-center">Feel inspired</h3> -->
                 <div class="cards">
