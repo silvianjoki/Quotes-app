@@ -10,7 +10,7 @@
             <div class="col-sm-9">
                 <div class="cards">
                     <div *ngFor="let quote  of sortQuotes; let i= index" class="card" style="width: 20rem;">
-                    <div class="card-body appHighlightQuote *ngIf="highlightHighest() === quote.upvote && quote.upvote >0 >
+                    <div class="card-body">
                         <h4 class="card-title"> {{quote.likes}} <button (click)="displayInfo(i)" class="btn btn-dark btn-sm" id="quotes-button">Read more</button></h4>
                         <p class="card-text"> {{quote.quote}}</p>
                         <app-details *ngIf="quote.showInfo" (isRead)="quoteDelete ($event, i)"></app-details>

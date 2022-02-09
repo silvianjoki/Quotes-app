@@ -1,0 +1,45 @@
+h1{
+    font-family: 'The Nautigal', cursive;
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    /* font-size: xx-large; */
+}
+h4{
+    font-family: 'Dongle',cursive;
+}
+span{
+    font-family: 'Dongle',sans-serif;
+}
+
+.overlay{
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 5px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 4%;
+    margin-left: 4%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+#name{
+    color: rgba(4, 52, 83, 0.637);
+    font-weight: 700;
+}
+.all-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#quotes-button{
+    float:right
+}
+.card{
+    margin-bottom: 2%;
+    background-color: aliceblue;
+    box-shadow: 2px 2px 2px 2px;
+}
+
