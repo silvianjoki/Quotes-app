@@ -3,6 +3,17 @@
         {{title | titlecase}}
     </h1>
 </div>
+
+<div class="container-fluid">
+    <app-form (addQuote) = "addedQuote($event)"></app-form>
+</div>
+
+
+<!-- <div class="container">
+    <h1>
+        {{title | titlecase}}
+    </h1>
+</div>
 <div class="overllay">
 <hr style="width:50%;">
     <div class = col-sm-3>      
@@ -11,8 +22,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-9">
-                <!-- <h3 class="text-center">Feel inspired</h3> -->
-                <div class="cards">
+                <!<h3 class="text-center">Feel inspired</h3> -->
+                <!-- <div class="cards">
                     <div *ngFor="let quote  of sortQuotes; let i= index" class="card" style="width: 20rem;">
                     <div class="card-body" appHighlightQuote > 
                         <h4 class="card-title" > 
@@ -30,4 +41,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> --> -->

@@ -1,23 +1,14 @@
-*{
-    overflow-x: hidden;
-    margin:0;
-    padding: 0%;
-}
-.row {
-    padding:2%;
-    align-items: right;
-    /* margin-left: 50%; */
-}
+
+
+/* 
 h1{
     font-family: 'The Nautigal', cursive;
     color: white;
     text-align: center;
-    /* background-color: red; */
     font-weight: bolder;
-    /* padding-top: 2%; */
+    padding-top: 2%;
     padding-bottom: 1%;
     font-size: 60px;
-    /* font-size: xx-large; */
 }
 h4{
     font-family: 'Dongle',cursive;
@@ -30,7 +21,7 @@ span{
     background-color: rgba(0,0,0,0.3);
     flex-direction: column;
     column-count: 2;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     border-radius: 5px;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -39,7 +30,6 @@ span{
     padding-bottom: 5%;
     padding-top: 5%;
     height: 100%;
-    /* width: 1200px; */
 }
 #name{
     color: rgba(4, 52, 83, 0.637);
@@ -54,7 +44,6 @@ span{
     height: 600px;
     align-items: center;
     transform: y(-3px);
-    /* align-items: flex-start; */
     margin-left: 60%;
     flex-wrap: wrap; 
     justify-content: space-around;
@@ -81,4 +70,4 @@ span{
     margin-left: 60%;
     padding-top: 0%;
 }
-
+ */ 
