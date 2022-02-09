@@ -1,1 +1,8 @@
-<p>upvote works!</p>
+
+
+<h6 class="card-subtitle mb-2 text-muted"> {{quots.author}} <span id="when">Posted: {{quots.datePosted | dateCount}} days ago.</span>  </h6>
+<div class = "container-fluid" id = "buttons">
+    <button class="btn btn-sm like" (click)="upvote()"> {{quots.likes}} <i class="fa fa-thumbs-up" id="like"></i></button>
+    <button class="btn btn-sm hate" id="hate" (click)="downvote()"> {{quots.dislikes}} <i class="fa fa-thumbs-down" id="dislike"></i></button>
+    <button class="btn btn-sm btn-danger" id="delete" (click)="quoteDelete"> <i class="fa fa-trush" id="delete"></i></button>
+</div>
