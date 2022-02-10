@@ -1,15 +1,13 @@
 
-
-/* 
 h1{
     font-family: 'The Nautigal', cursive;
-    color: white;
+    color:white;
     text-align: center;
     font-weight: bolder;
     padding-top: 2%;
-    padding-bottom: 1%;
     font-size: 60px;
 }
+
 h4{
     font-family: 'Dongle',cursive;
 }
@@ -70,4 +68,3 @@ span{
     margin-left: 60%;
     padding-top: 0%;
 }
- */ 
