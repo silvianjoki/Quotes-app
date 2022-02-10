@@ -1,60 +1,55 @@
 # QuotesApp
 
+## Description
+Quotes app is an angular application that enables individuals to review quotes already existing in the website. Aside from this, you can add a new quote to the website and ensure that it is visible on the site. 
+
+Users are also able to upvote/like a quote in the webiste or dislike a quote. 
+
+Quotes with the highest likes are highlighted in a different color, therefore, visitors can find the best quote easily. 
+
 ## Author 
 Silvia Njoki
 
-## Description
-This project is an angular application which displays quotes, provides an opportunity to upvote or downvote quotes, and delete quotes.
 
-## Live page
+## Live Application
 
-https://silvianjoki.github.io/Quotes-app/
+This project is live via https://silvianjoki.github.io/Quotes-app/
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.1.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Installation of Quotes-App
+To run this project you should:
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Installation
-* Open terminal
-
-* run git clone https://github.com/silvianjoki/Quotes-app.git
+* run git clone  https://github.com/silvianjoki/Quotes-app.git
 
 * cd Quotes-app
 
-* run through code editor
+* npm install
+
+* ng serve to view the live version 'https://localhost:4200'
 
 ## Technologies used
 * HTML5
+
 * CSS
+
 * AngularCLI
+
 * Bootsrap (5)
+
+* Typescript
 
 ## Known bugs
 
 * no known bugs exist
 
-## Further help
+## Contact Information
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* Silvia Njoki
+* silvia.kamau@student.moringaschool.com
 
 ## Licence
  * MIT License:
- * Copyright (c) 2022 **Silvia Njoki**
+
+## Copyright Information
+Copyright (c) 2022 **Silvia Njoki**

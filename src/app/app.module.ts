@@ -8,7 +8,6 @@ import { UpvoteComponent } from './upvote/upvote.component';
 import { FormComponent } from './form/form.component';
 import { DetailsComponent } from './details/details.component';
 import { DateCountPipe } from './date-count.pipe';
-import { HighlightDirective } from './highlight.directive';
 import { HighlightQuoteDirective } from './highlight-quote.directive';
 
 @NgModule({
@@ -18,7 +17,6 @@ import { HighlightQuoteDirective } from './highlight-quote.directive';
     FormComponent,
     DetailsComponent,
     DateCountPipe,
-    HighlightDirective,
     HighlightQuoteDirective
   ],
   imports: [
