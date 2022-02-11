@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 import { Quotes } from '../quotes';
 
@@ -9,6 +9,7 @@ import { Quotes } from '../quotes';
 })
 export class UpvoteComponent implements OnInit {
 
+  
   quots = new Quotes('','','','', new Date (), 0, 0);
   @Output() deleteQuote = new EventEmitter <Quotes> ()
   quoteDelete (){

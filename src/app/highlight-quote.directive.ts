@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener} from '@angular/core';
+import { Directive, ElementRef} from '@angular/core';
 
 @Directive({
   selector: '[appHighlightQuote]'
@@ -6,17 +6,11 @@ import { Directive, ElementRef, HostListener} from '@angular/core';
 export class HighlightQuoteDirective {
 
   constructor(private elem:ElementRef) {
-    this.elem.nativeElement.style.background = 'rgb (139, 231, 250)'
-  }
-  @HostListener("click") onClicks(){
-    this.textDeco("green")
+    this.elem.nativeElement.style.background = 'cyan';
   }
 
-  @HostListener("dblclick") onDoubleClicks(){
-    this.textDeco("None")
-  }
-  private textDeco(action:string){
-    this.elem.nativeElement.style.color=action;
-  }
+  // private textDeco(action:string){
+  //   this.elem.nativeElement.style.color=action;
+  // }
   
 }
