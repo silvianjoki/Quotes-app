@@ -6,6 +6,7 @@
     <h1>
         {{title | titlecase}}
     </h1>
+    
     <div class="row">
         <div class="col-sm-8">
             <app-form (addQuote) = "addedQuote($event)"></app-form>
@@ -21,29 +22,17 @@
                         <button (click)="displayInfo(i)" class="btn btn-dark btn-sm" id="quotes-button">Read more</button>
                     </h4>
                     <p class="card-text" id= "innertext"> {{quote.quote}}</p>
-                    <app-upvote *ngIf="quote.showInfo"  (isRead)="quoteDelete ($event, i)"></app-upvote>
+                    <!-- <app-upvote *ngIf="quote.showInfo"  (isRead)="quoteDelete ($event, i)"></app-upvote> -->
                     <span class="card-subtitle mb-2">Shared by: 
                         <span id="name">{{quote.name}} 
-                        <span id="date">
+                        <span id="date" {{quote.}} >
                         on: <span id="datecolor">{{quote.datePosted|date:'short'}}</span></span></span></span>
+                    <span> <button class="btn btn-sm btn-danger"  (isRead)="quoteDelete ($event)"> <i class="bi-trash" id="delete"></i></button></span>
+                    <span > <app-upvote ></app-upvote> </span>
                 </div>
-                <div class="card-body"  appHighlightQuote >
-                <!-- *ngIf="highlighHighest() !== quote.likes && quote.likes >0"  -->
-                    <h4 class="card-title"  > 
-                        <span> {{quote.title }} </span>
-                        <button (click)="displayInfo(i)" class="btn btn-dark btn-sm" id="quotes-button">Read more</button>
-                    </h4>
-                    <p class="card-text" id= "innertext"> {{quote.quote}}</p>
-                    <app-upvote *ngIf="quote.showInfo"  (isRead)="quoteDelete ($event, i)"></app-upvote>
-                    <span class="card-subtitle mb-2">Shared by: 
-                        <span id="name">{{quote.name}} 
-                        <span id="date">
-                        on: <span id="datecolor">{{quote.datePosted|date:'short'}}</span></span></span></span>
-                </div>
-                
-                <app-details *ngIf="quote.showInfo"  (isRead) = 'quoteDelete($event, i)' ></app-details>
                 </div>
             </div>
-        </div>
+        </div><div class="col-sm-8">
+    </div>
     </div>
 </div>

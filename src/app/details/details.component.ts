@@ -1,5 +1,4 @@
 import { Component, Directive, ElementRef, OnInit } from '@angular/core';
-import { get } from 'http';
 import { HighlightQuoteDirective } from '../highlight-quote.directive';
 import { Quotes } from '../quotes';
 
@@ -17,12 +16,12 @@ export class DetailsComponent implements OnInit {
 
   title = 'Review Amazing Quotes';
   quotes:Quotes[] = [
-    new Quotes ( 'Hillary','Technology',  'Technology is best when it brings people together.', 'Matt Mullenweg', new Date (2022, 1, 12), 0, 0),
-    new Quotes ( 'Aimee','Tech', 'It has become appallingly obvious that our technology has exceeded our humanity.', 'Albert Einstein', new Date (2022, 1, 2), 0, 0),
-    new Quotes ( 'Sam', 'Life', 'The purpose of our lives is to be happy.', 'Dalai Lama', new Date (2022, 2, 5), 0, 0),
-    new Quotes ( 'Grace','Purpose', 'Get busy living or get busy dying.', 'Stephen King', new Date(2022, 2, 5), 0, 0),
-    new Quotes ( 'Eve', 'Life', 'Always focus on the work, rather than its reward.', 'Bravagad Gita', new Date(2022, 2, 5), 0, 0),
+    new Quotes ( 'Hillary','Technology',  'Technology is best when it brings people together.', 'Matt Mullenweg', new Date ('2022, 2, 10'), 0, 0),
+    new Quotes ( 'Aimee','Tech', 'It has become appallingly obvious that our technology has exceeded our humanity.', 'Albert Einstein', new Date ('2022, 2, 9'), 0, 0),
+    new Quotes ( 'Sam', 'Life', 'The purpose of our lives is to be happy.', 'Dalai Lama', new Date ('2022, 2, 9'), 0, 0),
+    new Quotes ( 'Grace','Purpose', 'Get busy living or get busy dying.', 'Stephen King', new Date('2022, 2, 10'), 0, 0),
   ];
+  
   
   
   // get dates posted
@@ -39,15 +38,14 @@ export class DetailsComponent implements OnInit {
     }
   
     // delete quote 
-  quoteDelete (isRead:any, index:any){
-    if (isRead) {
-      let quoteDelete = confirm("You really wanna let go?")
-      if(quoteDelete){
-        this.quotes.splice (index,1);
-      }
+  quoteDelete (isRead:any){
+    let quoteDelete = confirm ('You really wanna let go?')
+    if (quoteDelete) {
+      this.quotes.splice (index, 1)
     }
   }
 
+  // display info
     displayInfo(index:any){
       this.quotes[index].showInfo = !this.quotes [index].showInfo;
     }
@@ -88,6 +86,10 @@ function highlightHighest() {
 }
 
 function sortQuotes() {
+  throw new Error('Function not implemented.');
+}
+
+function $index($index: any, arg1: number) {
   throw new Error('Function not implemented.');
 }
 

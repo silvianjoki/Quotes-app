@@ -8,21 +8,22 @@ import { Quotes } from '../quotes';
   styleUrls: ['./upvote.component.css']
 })
 export class UpvoteComponent implements OnInit {
+  
+  quotes= new Quotes('','','','', new Date (), 0, 0);
 
-  
-  quots = new Quotes('','','','', new Date (), 0, 0);
   @Output() deleteQuote = new EventEmitter <Quotes> ()
-  quoteDelete (){
-    this.deleteQuote.emit(this.quots)
-  }
-  
-  
+  @Input()
+  quote!: Quotes;
+
   upvote(){
-    this.quots.likes+=1;
+    this.quotes.likes+=1;
   }
   downvote(){
-    this.quots.dislikes+=1;
+    this.quotes.dislikes+=1;
 
+  }
+  Delete (deleteQuote: boolean) {
+    this.deleteQuote.emit (deleteQuote);
   }
 
 

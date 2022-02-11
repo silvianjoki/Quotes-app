@@ -6,7 +6,8 @@ import { Directive, ElementRef} from '@angular/core';
 export class HighlightQuoteDirective {
 
   constructor(private elem:ElementRef) {
-    this.elem.nativeElement.style.background = 'cyan';
+    this.elem.nativeElement.style.background = '';
+    
   }
 
   // private textDeco(action:string){

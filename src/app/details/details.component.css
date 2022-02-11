@@ -17,9 +17,9 @@ span{
 
 .overllay{
     background-color: rgba(0,0,0,0.3);
-    flex-direction: column;
-    column-count: 2;
-    flex-wrap: wrap;
+    /* flex-direction: column; */
+    /* column-count: 2; */
+    /* flex-wrap: wrap; */
     border-radius: 5px;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -34,19 +34,12 @@ span{
     color: rgba(4, 52, 83, 0.637);
     font-weight: 700;
 }
-.all-cards{
-    /* display: flex; */
+
+
+.all-cards {
     flex-direction: row;
-    /* column-count: 2; */
-    /* flex-wrap: wrap; */
-    /* justify-content: space-around; */
-    /* height: 600px; */
-    align-items: center;
-    /* transform: y(-3px); */
-    margin-left: 60%;
-    /* flex-wrap: wrap;  */
-    /* justify-content: space-around; */
-    /* align-items: right; */
+    padding: 1%;
+    justify-self: center;
 }
 
 #quotes-button{
@@ -64,9 +57,12 @@ span{
     font-family: 'The Dongle',sans-serif;
     font-size: 18px;
 }
-.col-sm-9 {
+.col-sm-4 {
     align-items: right;
     margin-left: 60%;
     padding-top: 0%;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+    /* column-count: 2; */
     /* position: absolute; */
 }
