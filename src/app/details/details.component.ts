@@ -1,5 +1,4 @@
-import { Component,  OnInit } from '@angular/core';
-import { type } from 'os';
+import { Component,  Input,  OnInit } from '@angular/core';
 import { Quotes } from '../quotes';
 
 @Component({
@@ -8,11 +7,15 @@ import { Quotes } from '../quotes';
   styleUrls: ['./details.component.css']
 })
 
-
 export class DetailsComponent implements OnInit {
   ngOnInit(): void {
       
   }
+
+
+highestLikes !: number;
+likesNumber !: number;
+likesCounter !: number;
 
   title = 'Review Amazing Quotes';
   quotes:Quotes[] = [
@@ -21,20 +24,6 @@ export class DetailsComponent implements OnInit {
     new Quotes ( 'Sam', 'Life', 'The purpose of our lives is to be happy.', 'Dalai Lama', new Date ('2022, 2, 9'), 0, 0),
     new Quotes ( 'Grace','Purpose', 'Get busy living or get busy dying.', 'Stephen King', new Date('2022, 2, 10'), 0, 0),
   ];
-  
-  // get dates posted
-  get sortQuotes(){
-    return this.quotes.sort((a, b) => {
-      return <any > new Date(b.datePosted) - <any> new Date(a.datePosted);
-    });
-  }
-  // add new quote
-    addedQuote(quote:any){
-      let arraysize = this.quotes.length;
-      quote.id = arraysize+1;
-      quote.datePosted = new Date(quote.datePosted)
-      this.quotes.push(quote)
-    }
   
     // delete quote 
   quoteDelete (isRead:any, index: number){
@@ -45,7 +34,18 @@ export class DetailsComponent implements OnInit {
       }
     }
   }
-  
+
+  highlightHighest() {
+    this.highestLikes = 0;
+    this.likesNumber = 0;
+    for(this.likesCounter;this.likesCounter < this.quotes.length; this.likesCounter ++ ) {
+      this.likesNumber = this.quotes [this.likesCounter].likes 
+      if (this.likesNumber > this.highestLikes) {
+        this.highestLikes = this.likesNumber
+      }
+    }
+    return this.highestLikes
+  }
 
     displayInfo(index:any){
       this.quotes[index].showInfo = !this.quotes [index].showInfo;

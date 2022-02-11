@@ -1,11 +1,11 @@
 
 
 <h6 class="card-subtitle mb-2 text-muted"> 
-{{quotes.author}} <span id="when">Posted: {{quotes.datePosted | dateCount}} day(s) ago.</span>  </h6>
+{{quoted.author}} <span id="when">Posted: {{quoted.datePosted | dateCount}} day(s) ago.</span>  </h6>
 <div class = "container-fluid" id = "buttons">
-    <button class="btn btn-sm like" (click)="upvote()" > {{quotes.likes}} <i class="bi-hand-thumbs-up-fill" id="like"></i></button>
+    <button class="btn btn-sm like" (click)="upvote()" > {{quoted.likes}} <i class="bi-hand-thumbs-up-fill" id="like"></i></button>
 
-    <button class="btn btn-sm hate" (click)="downvote()" >  {{quotes.dislikes}} <i class="bi-hand-thumbs-down-fill" id="dislike"></i></button>
+    <button class="btn btn-sm hate" (click)="downvote()" >  {{quoted.dislikes}} <i class="bi-hand-thumbs-down-fill" id="dislike"></i></button>
 
     <button class="btn btn-sm btn-danger"  (click)="deleteQuote(true)"> <i class="bi-trash" id="delete"></i></button>
 </div>

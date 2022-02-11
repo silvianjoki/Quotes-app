@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <h1>Heyy!! Add it here</h1>
-    <form (ngSubmit)="addedQuote() ;quoteForm.resetForm({})" #quoteForm='ngForm' >
+    <form (ngSubmit)="addedQuote() " #quoteForm='ngForm' >
         <div class="form-group">
             <label for="name">Your Name</label>
             <input type="text" id="name" required class="form-control" [(ngModel)]="quoted.name" name="name" minlength = '3' required>
@@ -23,7 +23,6 @@
         </div>
         <br>
         <button type="submit" class="btn btn-sm btn-dark">add quote</button>
-        <!-- <button [disabled]="quoteForm.form.invalid" type="submit" class="btn btn-sm btn-dark" onsubmit="reset()">Add quote</button> -->
     </form>
     
 

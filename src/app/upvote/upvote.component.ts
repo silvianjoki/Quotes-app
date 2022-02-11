@@ -9,22 +9,22 @@ import { Quotes } from '../quotes';
 })
 export class UpvoteComponent implements OnInit {
   
-  quotes= new Quotes('','','','', new Date (), 0, 0);
+  quoted= new Quotes('','','','', new Date (), 0, 0);
 
-  @Output () isRead = new EventEmitter <boolean> ();
-    deleteQuote (read:boolean){
-      this.isRead.emit (read)
-    }
   @Input()
   quote!: Quotes;
 
   upvote(){
-    this.quotes.likes+=1;
+    this.quoted.likes+=1;
   }
   downvote(){
-    this.quotes.dislikes+=1;
+    this.quoted.dislikes+=1;
 
   }
+  @Output () isRead = new EventEmitter <boolean> ();
+    deleteQuote (read:boolean) {
+      this.isRead.emit (read)
+    }
   
 
 
