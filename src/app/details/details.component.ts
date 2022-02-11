@@ -12,7 +12,6 @@ export class DetailsComponent implements OnInit {
       
   }
 
-
 highestLikes !: number;
 likesNumber !: number;
 likesCounter !: number;
@@ -35,6 +34,13 @@ likesCounter !: number;
     }
   }
 
+  addedQuote(quotes:any){
+    let arraysize = this.quotes.length;
+    quotes.id = arraysize+1;
+    quotes.completeDate = new Date(quotes.completeDate)
+    this.quotes.push(quotes)
+  }
+
   highlightHighest() {
     this.highestLikes = 0;
     this.likesNumber = 0;
@@ -51,7 +57,5 @@ likesCounter !: number;
       this.quotes[index].showInfo = !this.quotes [index].showInfo;
     }
   }
-
-
 
 

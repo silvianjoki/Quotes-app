@@ -18,7 +18,6 @@ export class FormComponent implements OnInit {
   
 
   addedQuote(){
-    // this.add.emit(this.quoted);
     this.add.emit(this.quoted)
     console.log (this.quoted)
   }
