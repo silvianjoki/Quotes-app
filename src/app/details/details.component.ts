@@ -1,4 +1,5 @@
 import { Component,  OnInit } from '@angular/core';
+import { type } from 'os';
 import { Quotes } from '../quotes';
 
 @Component({
@@ -20,8 +21,6 @@ export class DetailsComponent implements OnInit {
     new Quotes ( 'Sam', 'Life', 'The purpose of our lives is to be happy.', 'Dalai Lama', new Date ('2022, 2, 9'), 0, 0),
     new Quotes ( 'Grace','Purpose', 'Get busy living or get busy dying.', 'Stephen King', new Date('2022, 2, 10'), 0, 0),
   ];
-  
-  
   
   // get dates posted
   get sortQuotes(){
@@ -47,11 +46,12 @@ export class DetailsComponent implements OnInit {
     }
   }
   
-  
 
     displayInfo(index:any){
       this.quotes[index].showInfo = !this.quotes [index].showInfo;
     }
   }
+
+
 
 

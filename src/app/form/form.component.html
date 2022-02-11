@@ -1,30 +1,29 @@
 <div class="container-fluid">
     <h1>Heyy!! Add it here</h1>
-    <form (ngSubmit)="addQuote() ;quoteForm.resetForm({})" #quoteForm='ngForm' >
-        <!-- <app-quote-details (addQuote)='addQuote'></app-quote-details> -->
+    <form (ngSubmit)="addedQuote() ;quoteForm.resetForm({})" #quoteForm='ngForm' >
         <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" class="form-control" [(ngModel)]="name" name="name" minlength = '3' required>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" required class="form-control" [(ngModel)]="quoted.name" name="name" minlength = '3' required>
             <!-- <div [hidden]="name.valid" || name.pristine class="alert alert-danger"></div> -->
         </div>
         <div class="form-group">
-            <label for="author">Title</label>
-            <input type="text" id="title" required class="form-control" [(ngModel)]="title"  name="title"  required>
+            <label for="author">Quote Title</label>
+            <input type="text" id="title" required class="form-control" [(ngModel)]="quoted.title"  name="title"  required>
             <!-- <div [hidden]="author.valid" || name.pristine class="alert alert-danger"></div> -->
         </div>
         <div class="form-group">
             <label for="description">Quote</label>
-            <textarea class="form-control" id="description" rows="2" [(ngModel)]="quote" name="description"  required></textarea>
+            <textarea class="form-control" id="description" rows="2" [(ngModel)]="quoted.quote" name="description"  required></textarea>
             <!-- <div [hidden]="quote.valid" || name.pristine class="alert alert-danger"></div> -->
         </div>
         <div class="form-group">
             <label for="author">Author</label>
-            <input type="text" id="author" required class="form-control" [(ngModel)]="author"  name="author"  required>
+            <input type="text" id="author" required class="form-control" [(ngModel)]="quoted.author"  name="author"  required>
             <!-- <div [hidden]="author.valid" || name.pristine class="alert alert-danger"></div> -->
         </div>
-
         <br>
-        <button type="submit" class="btn btn-sm btn-dark" [disabled]="!quoteForm.form.valid">Add quote</button>
+        <button type="submit" class="btn btn-sm btn-dark">add quote</button>
+        <!-- <button [disabled]="quoteForm.form.invalid" type="submit" class="btn btn-sm btn-dark" onsubmit="reset()">Add quote</button> -->
     </form>
     
 
