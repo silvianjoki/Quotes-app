@@ -11,7 +11,10 @@ export class UpvoteComponent implements OnInit {
   
   quotes= new Quotes('','','','', new Date (), 0, 0);
 
-  @Output() deleteQuote = new EventEmitter <Quotes> ()
+  @Output () isRead = new EventEmitter <boolean> ();
+    deleteQuote (read:boolean){
+      this.isRead.emit (read)
+    }
   @Input()
   quote!: Quotes;
 
@@ -22,9 +25,7 @@ export class UpvoteComponent implements OnInit {
     this.quotes.dislikes+=1;
 
   }
-  Delete (deleteQuote: boolean) {
-    this.deleteQuote.emit (deleteQuote);
-  }
+  
 
 
   constructor() { }

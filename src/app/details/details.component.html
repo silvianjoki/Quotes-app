@@ -9,27 +9,16 @@
     
     <div class="row">
         <div class="col-sm-8">
-            <app-form (addQuote) = "addedQuote($event)"></app-form>
+            <app-form (addedQuote) = "addedQuote($event)"></app-form>
         </div>
         <div class="col-sm-4">
-            <h3 class="text-center">Feel inspired</h3> 
-            <div class="cards">
+            <div class="all-cards">
                 <div *ngFor="let quote  of sortQuotes; let i= index" class="card" style="width: 20rem;">
-                <div class="card-body"  appHighlightQuote >
-                <!-- *ngIf="highlighHighest() === quote.likes && quote.likes >0"  -->
-                    <h4 class="card-title"  > 
-                        <span> {{quote.title }} </span>
-                        <button (click)="displayInfo(i)" class="btn btn-dark btn-sm" id="quotes-button">Read more</button>
-                    </h4>
+                <div class="card-body" >
+                    <h4 class="card-title" > {{quote.title }} <button (click)="displayInfo(i)" class="btn btn-dark btn-sm" id="quotes-button">Read more</button></h4>
                     <p class="card-text" id= "innertext"> {{quote.quote}}</p>
-                    <!-- <app-upvote *ngIf="quote.showInfo"  (isRead)="quoteDelete ($event, i)"></app-upvote> -->
-                    <span class="card-subtitle mb-2">Shared by: 
-                        <span id="name">{{quote.name}} 
-                        <span id="date" {{quote.}} >
-                        on: <span id="datecolor">{{quote.datePosted|date:'short'}}</span></span></span></span>
-                    <span> <button class="btn btn-sm btn-danger"  (isRead)="quoteDelete ($event)"> <i class="bi-trash" id="delete"></i></button></span>
-                    <span > <app-upvote ></app-upvote> </span>
-                </div>
+                    <app-upvote *ngIf="quote.showInfo" (isRead)="quoteDelete ($event, i)"  ></app-upvote>
+                    <span class="card-subtitle mb-2">Shared by :<span id= 'name'> {{quote.name}} </span> </span> <span id="date" >on:</span> <span id="datecolor"> {{quote.datePosted | date: 'short'}} </span>
                 </div>
             </div>
         </div><div class="col-sm-8">

@@ -1,5 +1,4 @@
-import { Component, Directive, ElementRef, OnInit } from '@angular/core';
-import { HighlightQuoteDirective } from '../highlight-quote.directive';
+import { Component,  OnInit } from '@angular/core';
 import { Quotes } from '../quotes';
 
 @Component({
@@ -33,63 +32,26 @@ export class DetailsComponent implements OnInit {
   // add new quote
     addedQuote(quote:any){
       let arraysize = this.quotes.length;
-      quote.completeDate = new Date(quote.completeDate)
+      quote.id = arraysize+1;
+      quote.datePosted = new Date(quote.datePosted)
       this.quotes.push(quote)
     }
   
     // delete quote 
-  quoteDelete (isRead:any){
-    let quoteDelete = confirm ('You really wanna let go?')
-    if (quoteDelete) {
-      this.quotes.splice (index, 1)
+  quoteDelete (isRead:any, index: number){
+    if (isRead) {
+      let quoteDelete = confirm ( 'wanna let go?')
+      if (quoteDelete) {
+        this.quotes. splice (index, 1)
+      }
     }
   }
+  
+  
 
-  // display info
     displayInfo(index:any){
       this.quotes[index].showInfo = !this.quotes [index].showInfo;
     }
   }
 
-  // highlightHighest() {
-  //   let quotesLikes = []
-  //   let hightestLikes: number 
-  //   for (let j = 0; j < this.quotes.length; j++) {
-  //     quotesLikes.push ( this.quotes[j].likes)
-  //   }
-    
-
-  // highlightHighest (); void {
-  //   let likes: number = Math.max.apply(Maths, this, getQuotes())
-  // }
-
-  // get sortQuotes(){
-  //   return this.quotes;
-  // }
-
-
-  //   quotesLikes.sort (function (a,b){
-  //     return b - a
-  //   })
-  //   hightestLikes = quotesLikes [0]
-  //   return hightestLikes;
-  // }
-
-  // get sortQuotes () {
-  //   return this.quotes.sort ((a, b) => {
-  //     return <any> new Date (b.datePosted) - <any> new Date (a.datePosted);
-  //   });
-  // }
-
-function highlightHighest() {
-  throw new Error('Function not implemented.');
-}
-
-function sortQuotes() {
-  throw new Error('Function not implemented.');
-}
-
-function $index($index: any, arg1: number) {
-  throw new Error('Function not implemented.');
-}
 
